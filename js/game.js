@@ -1,4 +1,6 @@
 //Variables
+/* Samuel Baquero: hay que usar "use strict" */
+"use strict";
 var cuadrados;
 var desaparecer_cuadros = false;
 var last_known_scroll_position = 0;
