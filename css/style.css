@@ -11,6 +11,7 @@ body {
   background-size: cover;
 }
 
+
 header h1 {
   font-weight: 700;
 	margin: 0;
@@ -34,9 +35,26 @@ header p {
   margin: 0;
 }
 
+@media only screen and (max-width: 760px) {
+	#movileFisrt { display: none; }
+	#skills{ background: url("https://cdn.tutsplus.com/vector/uploads/legacy/articles/2012/article-vintage-vector-graphics/16-isometric-retro.jpg");}
+}
+
+
 #hder{
-	-webkit-animation-duration: 2.5s;
-  -webkit-animation-delay: 0.5s;
+	-webkit-animation-duration: 2s;
+  -webkit-animation-delay: 0.25s;
+}
+#skills{
+	-webkit-animation-duration: 1s;
+  -webkit-animation-delay: 0.05s;
+}
+#skills2{
+	-webkit-animation-duration: 1s;
+  -webkit-animation-delay: 0.05s;
+}
+#foot{
+	-webkit-animation-duration: 0.5s;
 }
 
 .main {

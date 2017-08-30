@@ -7,9 +7,17 @@ var totalWidth,
     totalHeight;
 var fuente;
 var texto;
+var movil = false;
+
 // funcion de precarga de archivos
 function preload() {
     fuente = loadFont('/fonts/hotpizza.ttf');
+    checker();
+}
+function checker() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        movil = true;
+    }
 }
 // funcion de setup del sketch
 function setup() {
@@ -67,7 +75,13 @@ function draw() {
         if (allSprites.length > 90) {
             s.restitution = 3;
         }
-
+    }
+    //manejador movil
+    if (movil && allSprites.length > 20) {
+        for (var i = 0; allSprites.length - i > 14; i++) {
+            var s = allSprites[i];
+            s.remove();
+        }
     }
     // creo los sprites despues de aplicadas las funciones de cada ciclo
     drawSprites();
@@ -151,6 +165,7 @@ function mousePressed() {
 }
 // funcion touch para devices
 function touchStarted() {
+
     for (var i = 0; i < 10; i++) {
         var s = createSprite(random(0, totalWidth), random(0, totalHeight), 30, 30);
         s.velocity.x = random(-5, 5);
