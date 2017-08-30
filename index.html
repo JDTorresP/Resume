@@ -12,13 +12,18 @@
     <!-- links-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
         crossorigin="anonymous">
-    <!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">-->
+    <!--iconos bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <!-- animate.css link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <!-- favicon-->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <!-- google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="/text/css">
     <link href="https://fonts.googleapis.com/css?family=Abel|Amatic+SC|Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Quicksand:300,700" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
     <!-- mis estilos-->
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
@@ -26,51 +31,129 @@
 
 <body>
     <!-- Seccion del header de la pagina-->
-    <header class="container">
+    <header id="hder" class="container animated zoomInUp">
         <div class="row">
             <h1 class="col-sm-4">Joan Torres</h1>
             <nav class="col-sm-8 text-right">
-                <p>Skills</p>
-                <p>Languages</p>
-                <p>Projects</p>
-                <p>Contact</p>
+                <a onclick="skillsAnim();" href="#skills">
+                    <p>Skills</p>
+                </a>
+               <a onclick="skillsAnim2();" href="#skills2"> <p>Languages</p></a>
+                <a  href="#"><p>Projects</p>
+                <a onclick="footAnim();" href="#foot"><p>Contact</p></a>
             </nav>
         </div>
     </header>
+
 
     <!-- Animacion con p5.js  -->
     <div class="jumbotron-fluid">
         <div id='sketch1'> </div>
     </div>
-|
-    <!-- Yo no se :V -->
-    <!-- asaaaaa
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <h1 class="display-3">Cuentame tu idea!</h1>
-            <p class="lead">Empezemos a trabajar de inmediato</p>
-            <hr class="my-2">
-            <p>More info</p>
-            <p class="lead">
-                <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Contactame</a>
+
+    <div class="container main" id="skills">
+        <div class="row">
+            <h3 class="col-sm-4">Dominio en diseño multimedia y web</h3>
+            <p class="col-sm-8">Manejo los principales programas destacados de la suite de Adobe, generando una base solida para el diseño y
+                creacion de contenidos multimedia de ultima generación.
             </p>
         </div>
+        <div class="row">
+            <div class="value-props col-sm-4">
+                <div class="prop">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d8/Adobe_Illustrator_Icon_CS6.png" width="60px">
+                    <div class="rating">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <h2>Illustrator</h2>
+                    <p>Creacion y manejo de imagenes vectorizadas para visualizacion , modificacion y creacion de logotipos
+                        e impresion de alta calidad!
+                    </p>
+                </div>
+            </div>
+            <div class="value-props col-sm-4">
+                <div class="prop">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Adobe_Photoshop_CS4_icon_%282%29.png" width="60px">
+                    <div class="rating">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <h2>Photoshop</h2>
+                    <p>Edicion de fotos y manejo de efectos luminicos en todos los archivos multimedia de fotografia y retoques
+                        digitales!</p>
+                </div>
+            </div>
+            <div class="value-props col-sm-4">
+                <div class="prop">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/10/Adobe_InDesign_icon.png" width="60px">
+                    <div class="rating">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <h2>Indesign</h2>
+                    <p>Diseño y maquetacion de textos editoriales profesionalmente para la produccion de articulos de impresion
+                        digital!</p>
+                </div>
+            </div>
+        </div>
     </div>
-    -->
-
-     <div class="jumbotron">
-      <div class="container">
-        <h2>Mantente en contacto</h2>
-        <p>mail me lol</p>
-        <a class="btn" href="#">Join</a>
-      </div>
-    </div>
-    
     <!-- Paralaje sencillo -->
-<div class="parallax-window" data-parallax="scroll" data-image-src="http://phoenixscaffolding.nyc/wp-content/uploads/2015/06/skyline1.png"></div>
-   
-<!--seccion del footer-->
-    <footer class="footer-distributed">
+    <div class="parallax-window" data-parallax="scroll" data-image-src="https://i.pinimg.com/originals/b6/23/1c/b6231c16ced38cb408e0056abb2ada7a.jpg"></div>
+
+    <div class="container main2" id="skills2">
+        <div class="row">
+            <h3 class="col-sm-4">Implementacion de codigo y paginas web responsive</h3>
+            <p class="col-sm-8">Mediante el uso de tecnologias web y programacion orientada a objetos
+                se proveen soluciones practicas y efectivas para el desarrollo de problemas
+                empresariales o de organizaciones asi como la optimizacion de recursos.
+            </p>
+        </div>
+        <div class="row">
+            <div class="value-props col-sm-4">
+                <div class="prop">
+                    <img src="http://phpdesign.com.ve/wp-content/uploads/2015/11/nodejs_logo.png" width="60px">
+                    <div class="rating">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <h2>Node js</h2>
+                    <p>Node.js interpreta código Javascript utilizando el motor V8 de Google y proporciona un modelo dirigida por eventos y operaciones de entrada/salida asíncronas, 
+                        lo cual hace que sea ideal para aplicaciones en tiempo real con muchas conexiones simultáneas donde la comunicación entre clientes y servidor es constante
+                         (un ejemplo sencillo sería un chat, o una API REST).
+                    </p>
+                </div>
+            </div>
+            <div class="value-props col-sm-4">
+                <div class="prop">
+                    <img src="https://www.gitbook.com/cover/book/mongkuen/react.jpg?build=1470682429235" width="60px">
+                    <div class="rating">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <h2>React js</h2>
+                    <p> ReactJS como manejador de vista de la aplicación dentro de un paradigma Modelo-Vista-Controlador. 
+                        El uso de reactJS junto a Flux, la arquitectura que la red social utiliza para crear aplicaciones web por el lado del cliente hace de este despliegue una solucion eficiente.
+                        En ese caso, se pasa de un modelo MVC a un flujo de datos unidireccional.</p>
+                </div>
+            </div>
+            <div class="value-props col-sm-4">
+                <div class="prop">
+                    <img src="https://blindedcyclops.neocities.org/p5js-icons/p5-sq-reverse-filled.png" width="60px">
+                    <div class="rating">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <h2>P5.js</h2>
+                    <p>Libreria multifuncional de referenciacion enfocada al desarrollo de animaciones y manejo de 
+                        figuras y representaciones canvas ademas de multiples funcionalidades desde manejo de DOM hasta
+                    interpretacion de sonidos y de comandos por voz!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Paralaje sencillo -->
+    <div class="parallax-window" data-parallax="scroll" data-image-src="http://phoenixscaffolding.nyc/wp-content/uploads/2015/06/skyline1.png"></div>
+
+    <!--seccion del footer-->
+    <footer class="footer-distributed" id ="foot">
         <div class="footer-left">
             <h3>Joan<span>DTP</span></h3>
             <p class="footer-links">
@@ -98,8 +181,8 @@
         </div>
         <div class="footer-right">
             <p class="footer-company-about">
-                <span>Sigueme en mis redes</span> Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis
-                velit, eu auctor lacus vehicula sit amet.
+                <span>Sigueme en mis redes</span> Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod
+                convallis velit, eu auctor lacus vehicula sit amet.
             </p>
             <div class="footer-icons">
                 <a href="#"><i class="fa fa-facebook"></i></a>
@@ -109,7 +192,6 @@
             </div>
         </div>
     </footer>
-
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="/lib/parallax.js"></script>
@@ -128,6 +210,8 @@
     <script src="lib/p5.play.js" type="text/javascript"></script>
     <!-- link a mi sketch juego 1 -->
     <script src="js/game.js" type="text/javascript"></script>
+    <!-- link a mi sketch juego 1 -->
+    <script src="js/animations.js" type="text/javascript"></script>
 
 
 </body>
