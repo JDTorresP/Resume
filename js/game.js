@@ -5,13 +5,15 @@ var last_known_scroll_position = 0;
 var ticking = false;
 var totalWidth,
     totalHeight;
-var fuente;
+var fuente,
+    p5;
 var texto;
 var movil = false;
 
 // funcion de precarga de archivos
 function preload() {
     fuente = loadFont('/fonts/hotpizza.ttf');
+    p5 = loadImage('/img/p5.png');
     checker();
 }
 function checker() {
@@ -28,6 +30,7 @@ function setup() {
     myCanvas.parent('sketch1');
     //inicializo el grupo de sprites
     cuadrados = new Group();
+
     inicializar();
 }
 
@@ -35,6 +38,7 @@ function setup() {
 function draw() {
     //pinta el fondo
     background(0, 0, 0);
+      image(p5,totalWidth/1.1, totalHeight/10,35 ,35);
 
     //Asigno el rebote a mi grupo de sprites
     cuadrados.bounce(cuadrados);
@@ -71,6 +75,7 @@ function draw() {
         }
         if (desaparecer_cuadros) {
             s.velocity.y = -20;
+            print("wtf");
         }
         if (allSprites.length > 90) {
             s.restitution = 3;
