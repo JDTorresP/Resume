@@ -12,8 +12,8 @@ var movil = false;
 
 // funcion de precarga de archivos
 function preload() {
-    fuente = loadFont('/fonts/hotpizza.ttf');
-    p5 = loadImage('/img/p5.png');
+    fuente = loadFont('./fonts/hotpizza.ttf');
+    p5 = loadImage('./img/p5.png');
     checker();
 }
 function checker() {
